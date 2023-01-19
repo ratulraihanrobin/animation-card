@@ -4,3 +4,137 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#003355, #003355 50%,
+     #FFF8F3 50%, #FFF8F3 100%);
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: #000;
+     box-shadow: 0 15px 30px rgba(0, 0,0, 0.220);
+     display: flex;
+     overflow: hidden;
+     transition: 0.5s ease-in-out;
+     border-radius: 10px;
+}
+
+.card:hover{
+    width: 600px;
+}
+
+.card .imgBx{
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.card .imgBx img{
+    max-width: 250px;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .imgBx img{
+    transform: rotate(-35deg) translate(-20px);
+}
+
+.card .details{
+    position: absolute;
+    left: 0%;
+    min-width: 300px;
+    height: 100%;
+    background: #035;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.card .details:hover{
+    left: 300px;
+}
+
+.card .details::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+  }
+
+  .card .details h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1em;
+  }
+
+.card .details h3 span{
+    font-size: 0.65em;
+    font-weight: 300;
+    text-transform: none;
+    opacity: 0.85;
+}  
+
+.card .details h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-weight: 0.9em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1em;
+  }
+
+  .card .details p {
+    color: #fff;
+    opacity: 0.35;
+    font-size: 0.8em;
+  }
+
+  .card .details .size {
+    display: flex;
+    gap: 10px;
+  }
+
+  .card .details .size li{
+    list-style: none;
+    color: #fff;
+    font-size: 0.9;
+    font-weight: 500;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.65;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+
+.card .imgBx img {
+    max-width: 250px;
+    transition: 0.5s ease-in-out;
+}
